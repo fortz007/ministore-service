@@ -1,0 +1,6 @@
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/repositories/InventoryRepository.java
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/models/Inventory.java
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/InventoryServiceApplication.java
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/services/InventoryService.java
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/dtos/InventoryResponseDto.java
+/Users/decagon/Desktop/ministore-service/inventory-service/src/main/java/com/fortuneprogramming/inventoryservice/controllers/InventoryController.java

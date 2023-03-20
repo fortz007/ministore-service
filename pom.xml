@@ -14,6 +14,8 @@
   <modules>
     <module>discovery-server</module>
     <module>product-service</module>
+    <module>order-service</module>
+    <module>inventory-service</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -49,10 +51,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.boot</groupId>-->
-<!--      <artifactId>spring-boot-starter-test</artifactId>-->
-<!--    </dependency>-->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>

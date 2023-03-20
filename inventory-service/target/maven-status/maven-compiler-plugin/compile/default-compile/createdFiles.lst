@@ -1,0 +1,7 @@
+com/fortuneprogramming/inventoryservice/services/InventoryService.class
+com/fortuneprogramming/inventoryservice/repositories/InventoryRepository.class
+com/fortuneprogramming/inventoryservice/models/Inventory.class
+com/fortuneprogramming/inventoryservice/dtos/InventoryResponseDto.class
+com/fortuneprogramming/inventoryservice/dtos/InventoryResponseDto$InventoryResponseDtoBuilder.class
+com/fortuneprogramming/inventoryservice/controllers/InventoryController.class
+com/fortuneprogramming/inventoryservice/InventoryServiceApplication.class

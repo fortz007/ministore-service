@@ -20,7 +20,7 @@ import java.util.UUID;
 @Transactional
 public class OrderService {
     private final OrderRepository orderRepository;
-    private final WebClient webClient;
+    private final WebClient.Builder webClient;
 
     public void placeOrder(OrderRequestDto orderRequestDto){
         Order order = new Order();
@@ -35,8 +35,8 @@ public class OrderService {
                 .map(OrderItem::getSkuCode)
                 .toList();
 
-        InventoryResponseDto[] inventoryResponseList = webClient.get()
-                .uri("http://localhost:8082/api/inventory",
+        InventoryResponseDto[] inventoryResponseList = webClient.build().get()
+                .uri("http://inventory-service/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
                 .retrieve()
                 .bodyToMono(InventoryResponseDto[].class)

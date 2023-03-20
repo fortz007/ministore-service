@@ -1,0 +1,10 @@
+com/fortuneprogramming/productservice/dto/ProductRequest$ProductRequestBuilder.class
+com/fortuneprogramming/productservice/dto/ProductResponse.class
+com/fortuneprogramming/productservice/model/Product$ProductBuilder.class
+com/fortuneprogramming/productservice/model/Product.class
+com/fortuneprogramming/productservice/dto/ProductResponse$ProductResponseBuilder.class
+com/fortuneprogramming/productservice/repository/ProductRepository.class
+com/fortuneprogramming/productservice/service/ProductService.class
+com/fortuneprogramming/productservice/dto/ProductRequest.class
+com/fortuneprogramming/productservice/controller/ProductController.class
+com/fortuneprogramming/productservice/ProductServiceApplication.class

@@ -1,0 +1,7 @@
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/ProductServiceApplication.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/controller/ProductController.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/dto/ProductRequest.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/service/ProductService.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/repository/ProductRepository.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/dto/ProductResponse.java
+/Users/decagon/Desktop/ministore-service/product-service/src/main/java/com/fortuneprogramming/productservice/model/Product.java

@@ -37,9 +37,9 @@ public class OrderService {
         List<String> skuCodes = order.getOrderItemsList().stream()
                 .map(OrderItem::getSkuCode)
                 .toList();
-
+        //creating a custom span for inventory-service lookup
         Span inventoryServiceLookup = tracer.nextSpan().name("InventoryServiceLookup");
-
+        //spring cloud sleuth will assign the custom span id to the whole code will be executed and bearing the span id
         try(Tracer.SpanInScope spanInScope = tracer.withSpan(inventoryServiceLookup.start())) {
             InventoryResponseDto[] inventoryResponseList = webClient.build().get()
                     .uri("http://inventory-service/api/inventory",

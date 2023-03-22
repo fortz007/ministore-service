@@ -22,7 +22,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClient;
 
-    public void placeOrder(OrderRequestDto orderRequestDto){
+    public String placeOrder(OrderRequestDto orderRequestDto){
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
         List<OrderItem> orderItems = orderRequestDto.getOrderItemsDtoList()
@@ -42,12 +42,12 @@ public class OrderService {
                 .bodyToMono(InventoryResponseDto[].class)
                 .block();
 
-
         boolean productsInStock = Arrays.stream(inventoryResponseList)
                 .allMatch(InventoryResponseDto::getIsInStock);
 
         if(productsInStock){
             orderRepository.save(order);
+            return "order placed successfully";
         }else
             throw new IllegalArgumentException("Product is Out Of Stock, Kindly check out other product");
     }

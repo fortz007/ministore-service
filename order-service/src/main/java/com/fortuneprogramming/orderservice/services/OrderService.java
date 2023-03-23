@@ -59,7 +59,7 @@ public class OrderService {
 
             if (productsInStock) {
                 orderRepository.save(order);
-                kafkaTemplate.send("notification topic", new OrderPlacedEvent(order.getOrderNumber()));
+                kafkaTemplate.send("notificationTopic", new OrderPlacedEvent(order.getOrderNumber()));
                 return "order placed successfully";
             } else {
                 throw new IllegalArgumentException("Product is Out Of Stock, Kindly check out other product");

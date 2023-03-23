@@ -3,6 +3,7 @@ package com.fortuneprogramming.orderservice.services;
 import com.fortuneprogramming.orderservice.dtos.InventoryResponseDto;
 import com.fortuneprogramming.orderservice.dtos.OrderItemDto;
 import com.fortuneprogramming.orderservice.dtos.OrderRequestDto;
+import com.fortuneprogramming.orderservice.events.OrderPlacedEvent;
 import com.fortuneprogramming.orderservice.models.Order;
 import com.fortuneprogramming.orderservice.models.OrderItem;
 import com.fortuneprogramming.orderservice.repositories.OrderRepository;
@@ -25,7 +26,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClient;
     private final Tracer tracer;
-    private final KafkaTemplate kafkaTemplate;
+    private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     public String placeOrder(OrderRequestDto orderRequestDto){
         Order order = new Order();
@@ -58,7 +59,7 @@ public class OrderService {
 
             if (productsInStock) {
                 orderRepository.save(order);
-                kafkaTemplate.send("notification topic",order.getOrderNumber());
+                kafkaTemplate.send("notification topic", new OrderPlacedEvent(order.getOrderNumber()));
                 return "order placed successfully";
             } else {
                 throw new IllegalArgumentException("Product is Out Of Stock, Kindly check out other product");

@@ -9,6 +9,7 @@ import com.fortuneprogramming.orderservice.repositories.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.sleuth.Span;
 import org.springframework.cloud.sleuth.Tracer;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -24,6 +25,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClient;
     private final Tracer tracer;
+    private final KafkaTemplate kafkaTemplate;
 
     public String placeOrder(OrderRequestDto orderRequestDto){
         Order order = new Order();
@@ -56,6 +58,7 @@ public class OrderService {
 
             if (productsInStock) {
                 orderRepository.save(order);
+                kafkaTemplate.send("notification topic",order.getOrderNumber());
                 return "order placed successfully";
             } else {
                 throw new IllegalArgumentException("Product is Out Of Stock, Kindly check out other product");

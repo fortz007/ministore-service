@@ -4,6 +4,8 @@
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/controllers/OrderController.java
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/models/Order.java
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/dtos/InventoryResponseDto.java
+/Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/events/OrderPlacedEvent.java
+/Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/config/WebClientConfig.java
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/models/OrderItem.java
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/dtos/OrderItemDto.java
 /Users/decagon/Desktop/ministore-service/order-service/src/main/java/com/fortuneprogramming/orderservice/services/OrderService.java

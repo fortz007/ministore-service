@@ -1,10 +1,12 @@
 com/fortuneprogramming/orderservice/dtos/InventoryResponseDto.class
-com/fortuneprogramming/orderservice/dtos/OrderRequestDto.class
 com/fortuneprogramming/orderservice/services/OrderService.class
-com/fortuneprogramming/orderservice/dtos/OrderItemDto.class
+com/fortuneprogramming/orderservice/config/WebClientConfig.class
 com/fortuneprogramming/orderservice/controllers/OrderController.class
 com/fortuneprogramming/orderservice/repositories/OrderRepository.class
+com/fortuneprogramming/orderservice/dtos/OrderRequestDto.class
+com/fortuneprogramming/orderservice/dtos/OrderItemDto.class
 com/fortuneprogramming/orderservice/models/Order.class
 com/fortuneprogramming/orderservice/dtos/InventoryResponseDto$InventoryResponseDtoBuilder.class
 com/fortuneprogramming/orderservice/OrderServiceApplication.class
+com/fortuneprogramming/orderservice/events/OrderPlacedEvent.class
 com/fortuneprogramming/orderservice/models/OrderItem.class
